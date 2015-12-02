@@ -1,0 +1,20 @@
+{
+    "name": "phpbrew/docker-image-generator",
+    "authors": [
+        {
+            "name": "ronmi",
+            "email": "ronmi@patrolavia.com"
+        }
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*"
+    },
+    "require": {
+        "ronmi/dockerkit": "~0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phpbrew\\DIG\\": "src"
+        }
+    }
+}
