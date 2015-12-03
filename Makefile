@@ -4,7 +4,7 @@
 
 lint:
 	find src -name '*.php' -exec php -l {} \;
-	find test -name '*.php' -exec php -l {} \;
+	php -l test.php
 
 check: lint
 
