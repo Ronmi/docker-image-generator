@@ -11,11 +11,13 @@ require('vendor/autoload.php');
 
 $file = (new Fruit\DockerKit\Dockerfile($img, 'Ronmi Ren <ronmi@patrolavia.com>'))
     ->distro('debian')
-    ->ensureBash();
-
-(new PHPBrew\DIG\PHPBrewInstaller($php, $ver, 'root'))
-    ->variant($var)->installTo($file);
-
-echo $file->workdir('/root')->entrypoint(['bash'])->generate() . "\n\n";
+    ->ensureBash()
+    ->install(
+        (new PHPBrew\DIG\PHPBrewInstaller($php, $ver, 'root'))
+        ->variant($var)
+    )
+    ->workdir('/root')
+    ->entrypoint(['bash']);
+echo $file->generate() . "\n\n";
 
 (new Fruit\DockerKit\DockerBuild($name))->run($file);
