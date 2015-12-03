@@ -66,7 +66,6 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
             ->uStart($this->user)
             ->shell('phpbrew init')
             ->appendToFile('source ~/.phpbrew/bashrc', '~/.bashrc')
-            ->shell('source ~/.phpbrew/bashrc')
             ->shell('phpbrew update')
             ->gReset();
 
@@ -75,7 +74,6 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
         $file
             ->shell($cmd)
             ->gReset()
-            ->shell('source ~/.phpbrew/bashrc')
             ->shell('phpbrew switch $(phpbrew list|grep -vF system|head -n 1)')
             ->gEnd()
             ->uEnd();
