@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Posix extends \Phpbrew\DIG\Variant
+class Posix extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

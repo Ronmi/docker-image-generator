@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Mcrypt extends \Phpbrew\DIG\Variant
+class Mcrypt extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

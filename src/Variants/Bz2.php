@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Bz2 extends \Phpbrew\DIG\Variant
+class Bz2 extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

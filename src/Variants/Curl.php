@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Curl extends \Phpbrew\DIG\Variant
+class Curl extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

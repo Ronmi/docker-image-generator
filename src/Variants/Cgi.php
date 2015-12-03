@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Cgi extends \Phpbrew\DIG\Variant
+class Cgi extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

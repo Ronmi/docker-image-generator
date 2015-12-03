@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Fileinfo extends \Phpbrew\DIG\Variant
+class Fileinfo extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

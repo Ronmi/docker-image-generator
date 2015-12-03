@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Pdo extends \Phpbrew\DIG\Variant
+class Pdo extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Imap extends \Phpbrew\DIG\Variant
+class Imap extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

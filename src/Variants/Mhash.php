@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Mhash extends \Phpbrew\DIG\Variant
+class Mhash extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

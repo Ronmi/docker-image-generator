@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Opcache extends \Phpbrew\DIG\Variant
+class Opcache extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

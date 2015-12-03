@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Tokenizer extends \Phpbrew\DIG\Variant
+class Tokenizer extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

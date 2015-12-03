@@ -1,11 +1,11 @@
 <?php
 
-namespace Phpbrew\DIG;
+namespace PHPBrew\DIG;
 
 use Fruit\DockerKit\Installer;
 use Fruit\DockerKit\Dockerfile;
 
-class PhpbrewInstaller extends VirtualVariant implements Installer
+class PHPBrewInstaller extends VirtualVariant implements Installer
 {
     private $vars;
     private $phpVer;
@@ -21,7 +21,7 @@ class PhpbrewInstaller extends VirtualVariant implements Installer
     }
 
     /**
-     * @return PhpbrewInstaller
+     * @return PHPBrewInstaller
      */
     public function variant($var)
     {
@@ -30,7 +30,7 @@ class PhpbrewInstaller extends VirtualVariant implements Installer
     }
 
     /**
-     * @return PhpbrewInstaller
+     * @return PHPBrewInstaller
      */
     public function variants(array $vars)
     {

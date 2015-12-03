@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Ftp extends \Phpbrew\DIG\Variant
+class Ftp extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

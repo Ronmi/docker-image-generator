@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Xmlrpc extends \Phpbrew\DIG\Variant
+class Xmlrpc extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

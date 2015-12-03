@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Fpm extends \Phpbrew\DIG\Variant
+class Fpm extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

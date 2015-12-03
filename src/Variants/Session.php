@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Session extends \Phpbrew\DIG\Variant
+class Session extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

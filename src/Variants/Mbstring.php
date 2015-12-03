@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Mbstring extends \Phpbrew\DIG\Variant
+class Mbstring extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

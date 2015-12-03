@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Openssl extends \Phpbrew\DIG\Variant
+class Openssl extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

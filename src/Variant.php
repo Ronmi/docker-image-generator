@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpbrew\DIG;
+namespace PHPBrew\DIG;
 
 abstract class Variant
 {

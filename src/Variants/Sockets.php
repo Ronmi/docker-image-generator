@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Sockets extends \Phpbrew\DIG\Variant
+class Sockets extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

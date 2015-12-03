@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Exif extends \Phpbrew\DIG\Variant
+class Exif extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

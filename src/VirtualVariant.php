@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpbrew\DIG;
+namespace PHPBrew\DIG;
 
 abstract class VirtualVariant extends Variant
 {
@@ -28,7 +28,7 @@ abstract class VirtualVariant extends Variant
                         $val = 'vdefault';
                         break;
                 }
-                return "Phpbrew\\DIG\\Variants\\" . ucfirst($val);
+                return "PHPBrew\\DIG\\Variants\\" . ucfirst($val);
             }, $vars);
             $vars = array_filter($vars, function ($val) {
                 return class_exists($val);

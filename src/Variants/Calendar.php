@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Calendar extends \Phpbrew\DIG\Variant
+class Calendar extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

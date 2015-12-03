@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Ipv6 extends \Phpbrew\DIG\Variant
+class Ipv6 extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

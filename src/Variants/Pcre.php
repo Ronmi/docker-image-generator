@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Pcre extends \Phpbrew\DIG\Variant
+class Pcre extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

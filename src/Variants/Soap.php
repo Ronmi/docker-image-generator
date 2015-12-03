@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Soap extends \Phpbrew\DIG\Variant
+class Soap extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array

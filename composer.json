@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Phpbrew\\DIG\\": "src"
+            "PHPBrew\\DIG\\": "src"
         }
     }
 }

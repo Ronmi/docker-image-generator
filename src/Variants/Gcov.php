@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpbrew\DIG\Variants;
+namespace PHPBrew\DIG\Variants;
 
-class Gcov extends \Phpbrew\DIG\Variant
+class Gcov extends \PHPBrew\DIG\Variant
 {
     /**
      * @return array
