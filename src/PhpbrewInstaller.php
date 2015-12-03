@@ -72,6 +72,12 @@ class PhpbrewInstaller extends VirtualVariant implements Installer
 
         $args = array_unique($this->args($this->phpVer, $this->debianVar));
         $cmd = sprintf('phpbrew install %s %s', $this->phpVer, implode(' ', $args));
-        $file->shell($cmd)->gEnd()->uEnd();
+        $file
+            ->shell($cmd)
+            ->gReset()
+            ->shell('source ~/.phpbrew/bashrc')
+            ->shell('phpbrew switch $(phpbrew list|grep -vF system|head -n 1)')
+            ->gEnd()
+            ->uEnd();
     }
 }
