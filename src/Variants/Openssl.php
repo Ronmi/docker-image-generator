@@ -2,7 +2,7 @@
 
 namespace Phpbrew\DIG\Variants;
 
-class Zip extends \Phpbrew\DIG\Variant
+class Openssl extends \Phpbrew\DIG\Variant
 {
     /**
      * @return array
@@ -11,7 +11,7 @@ class Zip extends \Phpbrew\DIG\Variant
     {
         switch ($debianVer) {
             case 'jessie':
-                $ret = array('zlib1g-dev');
+                $ret = array('libssl-dev');
                 return $ret;
         }
     }
@@ -21,6 +21,6 @@ class Zip extends \Phpbrew\DIG\Variant
      */
     public function args($phpVer, $debianVer)
     {
-        return array('+zip');
+        return array('+openssl');
     }
 }

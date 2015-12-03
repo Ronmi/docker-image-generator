@@ -7,13 +7,12 @@ $file = (new Fruit\DockerKit\Dockerfile('debian:jessie', 'Ronmi Ren <ronmi@patro
     ->distro('debian')
     ->ensureBash()
     ->gStart(true)
-    ->repo(['deb http://debian.office.rde/debian jessie main' => null])
     ->addGroup($user, getmygid())
     ->addUser($user, getmyuid(), getmygid())
     ->gEnd();
 
 (new Phpbrew\DIG\PhpbrewInstaller('5.6', 'jessie', $user))
-    ->variants(['cli', 'fpm'])->installTo($file);
+    ->variants(['default', 'fpm'])->installTo($file);
 
 echo $file->generate();
 ```
