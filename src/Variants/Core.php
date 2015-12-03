@@ -16,7 +16,6 @@ class Core extends \Phpbrew\DIG\Variant
                     $ret[] = 'libicu-dev';
                 }
                 return $ret;
-                break;
         }
     }
 }
