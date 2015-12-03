@@ -9,10 +9,11 @@ $file = (new Fruit\DockerKit\Dockerfile('debian:jessie', 'Ronmi Ren <ronmi@patro
     ->gStart(true)
     ->addGroup($user, getmygid())
     ->addUser($user, getmyuid(), getmygid())
-    ->gEnd();
-
-(new Phpbrew\DIG\PHPBrewInstaller('5.6', 'jessie', $user))
-    ->variants(['default', 'fpm'])->installTo($file);
+    ->gEnd()
+    ->install(
+        (new Phpbrew\DIG\PHPBrewInstaller('5.6', 'jessie', $user))
+        ->variants(['default', 'fpm'])
+    );
 
 echo $file->generate();
 ```
