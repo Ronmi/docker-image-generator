@@ -35,6 +35,7 @@ class PhpbrewInstaller extends VirtualVariant implements Installer
     public function variants(array $vars)
     {
         $this->vars = array_merge($this->vars, $vars);
+        return $this;
     }
 
     protected function deps()

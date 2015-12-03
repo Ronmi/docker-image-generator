@@ -2,7 +2,7 @@
 
 namespace Phpbrew\DIG\Variants;
 
-class Cli extends \Phpbrew\DIG\Variant
+class Fpm extends \Phpbrew\DIG\Variant
 {
     /**
      * @return array
