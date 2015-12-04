@@ -28,7 +28,7 @@ echo $file->generate();
 - [x] 5.5 - +default
 - [ ] 5.5 - +everything
 - [ ] 5.5 - all variants
-- [ ] 7 - +default
+- [x] 7 - +default
 - [ ] 7 - +everything
 - [ ] 7 - all variants
 - [x] 5.4 - +default
