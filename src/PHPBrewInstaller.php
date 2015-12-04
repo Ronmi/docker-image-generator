@@ -74,6 +74,7 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
             ->shell('phpbrew update')
             ->shell($cmd)
             ->gReset()
+            ->shell('source ~/.phpbrew/bashrc')
             ->shell('phpbrew switch $(phpbrew list|grep -vF system|head -n 1)')
             ->gEnd()
             ->uEnd();
