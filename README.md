@@ -1,4 +1,8 @@
-# Docker Image Generator
+# PHPBrew Docker Image Generator
+
+Generates docker image contains pre-compiled php using phpbrew.
+
+This project is aim to helping you compile php with ease, not providing an just-work docker image to fit your work. You must setup environment (like `php.ini` or entry point) on your own.
 
 ```php
 $user = get_current_user();
@@ -19,6 +23,8 @@ echo $file->generate();
 ```
 
 ## Progress
+
+These are distros and php versions known pass the compile test. You might need to customize the php configuration for the generated image to work.
 
 ### Debian jessie (stable)
 
