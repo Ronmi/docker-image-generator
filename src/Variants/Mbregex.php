@@ -4,6 +4,11 @@ namespace PHPBrew\DIG\Variants;
 
 class Mbregex extends \PHPBrew\DIG\Variant
 {
+    public function test()
+    {
+        return $this->testF('mb_ereg');
+    }
+
     /**
      * @return array
      */

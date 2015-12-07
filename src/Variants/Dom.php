@@ -4,6 +4,11 @@ namespace PHPBrew\DIG\Variants;
 
 class Dom extends \PHPBrew\DIG\Variant
 {
+    public function test()
+    {
+        return $this->testC('DOMDocument');
+    }
+
     /**
      * @return array
      */

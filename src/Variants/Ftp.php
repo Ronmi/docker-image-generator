@@ -4,6 +4,11 @@ namespace PHPBrew\DIG\Variants;
 
 class Ftp extends \PHPBrew\DIG\Variant
 {
+    public function test()
+    {
+        return $this->testF('ftp_connect');
+    }
+
     /**
      * @return array
      */

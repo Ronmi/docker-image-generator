@@ -4,6 +4,11 @@ namespace PHPBrew\DIG\Variants;
 
 class Bz2 extends \PHPBrew\DIG\Variant
 {
+    public function test()
+    {
+        return $this->testF('bzopen');
+    }
+
     /**
      * @return array
      */

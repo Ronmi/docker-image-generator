@@ -2,13 +2,18 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Inline extends \PHPBrew\DIG\Variant
+class Inifile extends \PHPBrew\DIG\Variant
 {
+    public function test()
+    {
+        return null;
+    }
+
     /**
      * @return array
      */
     public function args($phpVer, $debianVer)
     {
-        return array('+inline');
+        return array('+inifile');
     }
 }

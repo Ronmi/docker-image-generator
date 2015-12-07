@@ -4,6 +4,11 @@ namespace PHPBrew\DIG\Variants;
 
 class Opcache extends \PHPBrew\DIG\Variant
 {
+    public function test()
+    {
+        return $this->testF('opcache_reset');
+    }
+
     /**
      * @return array
      */

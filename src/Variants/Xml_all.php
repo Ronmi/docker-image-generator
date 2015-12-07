@@ -2,13 +2,6 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Xml_all extends \PHPBrew\DIG\Variant
+class Xml_all extends Xml
 {
-    /**
-     * @return array
-     */
-    public function args($phpVer, $debianVer)
-    {
-        return array('+xml_all');
-    }
 }

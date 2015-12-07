@@ -4,6 +4,11 @@ namespace PHPBrew\DIG\Variants;
 
 class Openssl extends \PHPBrew\DIG\Variant
 {
+    public function test()
+    {
+        return $this->testF('openssl_encrypt');
+    }
+
     /**
      * @return array
      */

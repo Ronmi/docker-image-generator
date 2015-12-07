@@ -2,11 +2,11 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Session extends \PHPBrew\DIG\Variant
+class Inline extends \PHPBrew\DIG\Variant
 {
     public function test()
     {
-        return $this->testF('session_id');
+        return null;
     }
 
     /**
@@ -14,6 +14,6 @@ class Session extends \PHPBrew\DIG\Variant
      */
     public function args($phpVer, $debianVer)
     {
-        return array('+session');
+        return array('+inline');
     }
 }

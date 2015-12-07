@@ -50,6 +50,18 @@ abstract class VirtualVariant extends Variant
         return $ret;
     }
 
+    public function test()
+    {
+        foreach ($this->getVariants() as $obj) {
+            $res = $obj->test();
+            if ($res != null) {
+                $ref = new ReflectionClass($obj);
+                return 'While testing ' . $ref->getName() . ': ' . $res;
+            }
+        }
+        return null;
+    }
+
     /**
      * @return array
      */

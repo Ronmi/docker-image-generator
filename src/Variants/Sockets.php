@@ -4,6 +4,11 @@ namespace PHPBrew\DIG\Variants;
 
 class Sockets extends \PHPBrew\DIG\Variant
 {
+    public function test()
+    {
+        return $this->testF('socket_create');
+    }
+
     /**
      * @return array
      */

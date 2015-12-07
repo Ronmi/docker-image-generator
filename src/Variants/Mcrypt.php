@@ -4,6 +4,11 @@ namespace PHPBrew\DIG\Variants;
 
 class Mcrypt extends \PHPBrew\DIG\Variant
 {
+    public function test()
+    {
+        return $this->testF('mcrypt_encrypt');
+    }
+
     /**
      * @return array
      */
