@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Posix extends \PHPBrew\DIG\Variant
+class Posix extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

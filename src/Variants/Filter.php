@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Filter extends \PHPBrew\DIG\Variant
+class Filter extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

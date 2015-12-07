@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Soap extends \PHPBrew\DIG\Variant
+class Soap extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

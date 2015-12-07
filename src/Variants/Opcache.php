@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Opcache extends \PHPBrew\DIG\Variant
+class Opcache extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

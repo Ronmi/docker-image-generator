@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Zip extends \PHPBrew\DIG\Variant
+class Zip extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

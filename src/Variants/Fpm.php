@@ -4,11 +4,6 @@ namespace PHPBrew\DIG\Variants;
 
 class Fpm extends \PHPBrew\DIG\Variant
 {
-    public function test()
-    {
-        return null;
-    }
-
     /**
      * @return array
      */

@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Ipc extends \PHPBrew\DIG\Variant
+class Ipc extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

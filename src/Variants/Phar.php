@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Phar extends \PHPBrew\DIG\Variant
+class Phar extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

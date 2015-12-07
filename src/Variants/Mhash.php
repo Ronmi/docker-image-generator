@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Mhash extends \PHPBrew\DIG\Variant
+class Mhash extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

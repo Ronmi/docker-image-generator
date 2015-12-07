@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Tokenizer extends \PHPBrew\DIG\Variant
+class Tokenizer extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

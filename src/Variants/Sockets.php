@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Sockets extends \PHPBrew\DIG\Variant
+class Sockets extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

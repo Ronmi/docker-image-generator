@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Mcrypt extends \PHPBrew\DIG\Variant
+class Mcrypt extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

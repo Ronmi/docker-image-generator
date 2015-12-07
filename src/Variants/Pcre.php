@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Pcre extends \PHPBrew\DIG\Variant
+class Pcre extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

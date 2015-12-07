@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Json extends \PHPBrew\DIG\Variant
+class Json extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

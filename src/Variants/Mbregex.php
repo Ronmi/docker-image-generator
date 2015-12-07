@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Mbregex extends \PHPBrew\DIG\Variant
+class Mbregex extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

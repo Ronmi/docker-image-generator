@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Pcntl extends \PHPBrew\DIG\Variant
+class Pcntl extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

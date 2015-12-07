@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Session extends \PHPBrew\DIG\Variant
+class Session extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

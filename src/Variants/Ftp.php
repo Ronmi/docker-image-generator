@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Ftp extends \PHPBrew\DIG\Variant
+class Ftp extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

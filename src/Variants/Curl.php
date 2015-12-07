@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Curl extends \PHPBrew\DIG\Variant
+class Curl extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

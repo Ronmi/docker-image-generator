@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Imap extends \PHPBrew\DIG\Variant
+class Imap extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {
@@ -14,7 +14,7 @@ class Imap extends \PHPBrew\DIG\Variant
      */
     public function pkgs($phpVer, $debianVer)
     {
-        return array('libc-client-dev', 'libkrb5-dev');
+        return array('libc-client-dev', 'libkrb5-dev', 'libssl-dev');
     }
 
     /**
@@ -30,6 +30,6 @@ class Imap extends \PHPBrew\DIG\Variant
      */
     public function args($phpVer, $debianVer)
     {
-        return array('+imap', '--with-imap=/usr', '--with-kerberos');
+        return array('+imap', '--with-imap', '--with-kerberos', '--with-libdir=lib');
     }
 }

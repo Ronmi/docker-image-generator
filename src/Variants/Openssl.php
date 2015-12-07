@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Openssl extends \PHPBrew\DIG\Variant
+class Openssl extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

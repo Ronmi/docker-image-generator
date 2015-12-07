@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Exif extends \PHPBrew\DIG\Variant
+class Exif extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

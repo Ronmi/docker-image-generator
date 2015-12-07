@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Readline extends \PHPBrew\DIG\Variant
+class Readline extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

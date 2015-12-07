@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Bcmath extends \PHPBrew\DIG\Variant
+class Bcmath extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

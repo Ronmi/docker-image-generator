@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Calendar extends \PHPBrew\DIG\Variant
+class Calendar extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

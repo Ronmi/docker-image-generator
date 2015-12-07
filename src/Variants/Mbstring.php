@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Mbstring extends \PHPBrew\DIG\Variant
+class Mbstring extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

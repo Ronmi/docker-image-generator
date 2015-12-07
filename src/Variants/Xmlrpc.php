@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Xmlrpc extends \PHPBrew\DIG\Variant
+class Xmlrpc extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

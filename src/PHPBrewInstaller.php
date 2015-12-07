@@ -48,7 +48,7 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
         $file->gStart(true);
 
         // install packages
-        $pkgs = array('build-essential', 'php5-cli', 'php-pear', 'curl', 'wget');
+        $pkgs = array('build-essential', 'php5-cli', 'php-pear', 'curl', 'wget', 'pkg-config');
         $pkgs = array_merge($pkgs, $this->pkgs($this->phpVer, $this->debianVer));
         $file->install($pkgs);
 

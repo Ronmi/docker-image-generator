@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Pdo extends \PHPBrew\DIG\Variant
+class Pdo extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

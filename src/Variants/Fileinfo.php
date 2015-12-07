@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Fileinfo extends \PHPBrew\DIG\Variant
+class Fileinfo extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {

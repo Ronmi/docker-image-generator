@@ -2,7 +2,7 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Ctype extends \PHPBrew\DIG\Variant
+class Ctype extends \PHPBrew\DIG\TestableVariant
 {
     public function test()
     {
