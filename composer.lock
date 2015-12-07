@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5ae2d22adb19f8bb97f6e5671239e479",
-    "content-hash": "51522340a58f88fd272e4c589de11de1",
+    "hash": "bb7c7bcb74b74aae9ba94e7e0eb842d9",
+    "content-hash": "e39949776439b7df7860e154bb7df452",
     "packages": [
         {
             "name": "ronmi/dockerkit",
-            "version": "0.1.5",
+            "version": "0.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ronmi/dockerkit.git",
-                "reference": "1bab84f8c9910ad835cf091a4fdc35752cb919b1"
+                "reference": "a3aa000abf48b7cb0336ca6bcd66ccd44bc6fa74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ronmi/dockerkit/zipball/1bab84f8c9910ad835cf091a4fdc35752cb919b1",
-                "reference": "1bab84f8c9910ad835cf091a4fdc35752cb919b1",
+                "url": "https://api.github.com/repos/Ronmi/dockerkit/zipball/a3aa000abf48b7cb0336ca6bcd66ccd44bc6fa74",
+                "reference": "a3aa000abf48b7cb0336ca6bcd66ccd44bc6fa74",
                 "shasum": ""
             },
             "require-dev": {
@@ -43,7 +43,7 @@
                     "email": "ronmi@patrolavia.com"
                 }
             ],
-            "time": "2015-12-07 05:57:18"
+            "time": "2015-12-07 08:48:50"
         }
     ],
     "packages-dev": [
