@@ -10,7 +10,7 @@
         "squizlabs/php_codesniffer": "*"
     },
     "require": {
-        "ronmi/dockerkit": "~0.1"
+        "ronmi/dockerkit": ">=0.1.5"
     },
     "autoload": {
         "psr-4": {
