@@ -67,7 +67,26 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
             ->gReset();
 
         $args = array_unique($this->args($this->phpVer, $this->debianVar));
-        $cmd = sprintf('phpbrew install %s %s', $this->phpVer, implode(' ', $args));
+
+        $variants = array();
+        $extra = array();
+
+        foreach ($args as $arg) {
+            if (substr($arg, 0, 1) == '+') {
+                $variants[] = $arg;
+            } else {
+                $extra[] = $arg;
+            }
+        }
+
+        $opts = implode(' ', $variants);
+        if (count($extra) > 0) {
+            if ($opts != '') {
+                $opts .= ' ';
+            }
+            $opts .= '-- ' . implode(' ', $extra);
+        }
+        $cmd = sprintf('phpbrew install %s %s', $this->phpVer, $opts);
         $file
             ->shell('phpbrew update')
             ->shell($cmd)
