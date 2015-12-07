@@ -59,7 +59,10 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
         }
 
         $file
-            ->wget('https://s3-ap-northeast-1.amazonaws.com/phpbrew/travis-build/phpbrew')
+            ->wget(
+                'https://s3-ap-northeast-1.amazonaws.com/phpbrew/travis-build/phpbrew',
+                '/usr/local/bin/phpbrew'
+            )
             ->chmod('a+x', '/usr/local/bin/phpbrew')
             ->uStart($this->user)
             ->shell('phpbrew init')
