@@ -54,10 +54,8 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
 
         // init env
         foreach ($this->init($this->phpVer, $this->debianVar) as $acts) {
-            foreach ($acts as $act) {
-                list($method, $arg) = $act;
-                call_user_func_array(array($file, $method), $arg);
-            }
+            list($method, $arg) = $acts;
+            call_user_func_array(array($file, $method), $arg);
         }
 
         $file
