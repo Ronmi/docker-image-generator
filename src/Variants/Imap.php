@@ -20,14 +20,6 @@ class Imap extends \PHPBrew\DIG\TestableVariant
     /**
      * @return array
      */
-    public function init($phpVer, $debianVer)
-    {
-        return $this->fixDebianMultiarch('/usr/lib/libc-client.*');
-    }
-
-    /**
-     * @return array
-     */
     public function args($phpVer, $debianVer)
     {
         return array('+imap', '--with-imap', '--with-kerberos', '--with-libdir=lib');
