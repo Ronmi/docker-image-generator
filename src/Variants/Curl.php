@@ -12,6 +12,14 @@ class Curl extends \PHPBrew\DIG\TestableVariant
     /**
      * @return array
      */
+    public function pkgs($phpVer, $debianVer)
+    {
+        return array('libcurl4-gnutls-dev');
+    }
+
+    /**
+     * @return array
+     */
     public function args($phpVer, $debianVer)
     {
         return array('+curl');
