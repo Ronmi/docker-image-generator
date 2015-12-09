@@ -14,6 +14,6 @@ class Mbregex extends \PHPBrew\DIG\TestableVariant
      */
     public function args($phpVer, $debianVer)
     {
-        return array('+mbregex');
+        return array('+mbregex', '+mbstring');
     }
 }
