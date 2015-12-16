@@ -28,6 +28,16 @@ class Gd extends \PHPBrew\DIG\TestableVariant
         }
     }
 
+    public function init($phpVer, $debianVer)
+    {
+        if ($phpVer < '5.5') {
+            return array(
+                array('symlink', array('/usr/include/freetype2', '/usr/include/freetype2/freetype')),
+            );
+        }
+        return array();
+    }
+
     /**
      * @return array
      */
