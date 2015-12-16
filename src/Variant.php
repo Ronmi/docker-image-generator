@@ -7,6 +7,14 @@ abstract class Variant
     /**
      * @return array
      */
+    public function deps($phpVer, $debianVer)
+    {
+        return array();
+    }
+
+    /**
+     * @return array
+     */
     public function pkgs($phpVer, $debianVer)
     {
         return array();
@@ -25,6 +33,14 @@ abstract class Variant
      * @return array
      */
     public function args($phpVer, $debianVer)
+    {
+        return array();
+    }
+
+    /**
+     * @return array
+     */
+    public function post($phpVer, $debianVer)
     {
         return array();
     }

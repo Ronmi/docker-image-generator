@@ -5,11 +5,11 @@ namespace PHPBrew\DIG;
 use Fruit\DockerKit\Installer;
 use Fruit\DockerKit\Dockerfile;
 
-class PHPBrewInstaller extends VirtualVariant implements Installer
+class PHPBrewInstaller implements Installer
 {
     private $vars;
     private $phpVer;
-    private $debianVar;
+    private $debianVer;
     private $user;
 
     public function __construct($phpVer, $debianVer, $user)
@@ -17,7 +17,7 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
         $this->phpVer = $phpVer;
         $this->debianVer = $debianVer;
         $this->user = $user;
-        $this->vars = array('core');
+        $this->vars = array('core' => new \PHPBrew\DIG\Variants\Core);
     }
 
     /**
@@ -25,8 +25,26 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
      */
     public function variant($var)
     {
-        $this->vars[] = $var;
-        return $this;
+        $var = strtolower($var);
+        switch ($var) {
+            case 'static':
+                $var = 'vstatic';
+                break;
+            case 'default':
+                $var = 'vdefault';
+                break;
+        }
+        if (isset($this->vars[$var])) {
+            return $this;
+        }
+
+        $cls = "PHPBrew\\DIG\\Variants\\" . ucfirst($var);
+        if (!class_exists($cls)) {
+            return $this;
+        }
+        $obj = new $cls;
+        $this->vars[$var] = $obj;
+        return $this->variants($obj->deps($this->phpVer, $this->debianVer));
     }
 
     /**
@@ -34,13 +52,10 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
      */
     public function variants(array $vars)
     {
-        $this->vars = array_merge($this->vars, $vars);
+        foreach ($vars as $v) {
+            $this->variant($v);
+        }
         return $this;
-    }
-
-    protected function deps()
-    {
-        return $this->vars;
     }
 
     public function installTo(Dockerfile $file)
@@ -53,7 +68,7 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
         $file->install($pkgs);
 
         // init env
-        foreach ($this->init($this->phpVer, $this->debianVar) as $acts) {
+        foreach ($this->init($this->phpVer, $this->debianVer) as $acts) {
             list($method, $arg) = $acts;
             call_user_func_array(array($file, $method), $arg);
         }
@@ -69,7 +84,7 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
             ->appendToFile('source ~/.phpbrew/bashrc', '~/.bashrc')
             ->gReset();
 
-        $args = array_unique($this->args($this->phpVer, $this->debianVar));
+        $args = array_unique($this->args());
 
         $variants = array();
         $extra = array();
@@ -95,8 +110,54 @@ class PHPBrewInstaller extends VirtualVariant implements Installer
             ->shell($cmd)
             ->gReset()
             ->shell('source ~/.phpbrew/bashrc')
-            ->shell('phpbrew switch $(phpbrew list|grep -vF system|head -n 1)')
+            ->shell('phpbrew switch $(phpbrew list|grep -vF system|head -n 1)');
+        foreach ($this->post() as $entry) {
+            list($method, $args) = $entry;
+            call_user_func_array(array($file, $method), $args);
+        }
+        $file
             ->gEnd()
             ->uEnd();
+    }
+
+    private function aggregate($method)
+    {
+        $ret = array();
+        foreach ($this->vars as $var => $obj) {
+            $ret = array_merge($ret, $obj->$method($this->phpVer, $this->debianVer));
+        }
+        return $ret;
+    }
+
+    /**
+     * @return array
+     */
+    private function pkgs()
+    {
+        return $this->aggregate('pkgs');
+    }
+
+    /**
+     * @return array
+     */
+    private function init()
+    {
+        return $this->aggregate('init');
+    }
+
+    /**
+     * @return array
+     */
+    private function args()
+    {
+        return $this->aggregate('args');
+    }
+
+    /**
+     * @return array
+     */
+    private function post()
+    {
+        return $this->aggregate('post');
     }
 }

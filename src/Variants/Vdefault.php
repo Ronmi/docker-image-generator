@@ -2,9 +2,9 @@
 
 namespace PHPBrew\DIG\Variants;
 
-class Vdefault extends \PHPBrew\DIG\VirtualVariant
+class Vdefault extends \PHPBrew\DIG\Variant
 {
-    protected function deps()
+    public function deps()
     {
         return array(
             'bcmath',
