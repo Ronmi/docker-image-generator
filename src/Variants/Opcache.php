@@ -16,4 +16,12 @@ class Opcache extends \PHPBrew\DIG\TestableVariant
     {
         return array('+opcache');
     }
+
+    public function post($phpVer, $debianVer)
+    {
+        if ($phpVer >= '5.5') {
+            return $this->enableZendExtension('opcache');
+        }
+        return array();
+    }
 }
