@@ -110,7 +110,10 @@ class PHPBrewInstaller implements Installer
             ->shell($cmd)
             ->gReset()
             ->shell('source ~/.phpbrew/bashrc')
-            ->shell('phpbrew switch $(phpbrew list|grep -vF system|head -n 1)');
+            ->shell('phpbrew switch $(phpbrew list|grep -vF system|head -n 1)')
+            ->shell('BINDIR=$(phpbrew path bin)')
+            ->shell('EXTDIR=$(phpbrew path ext)')
+            ->shell('ETCDIR=$(phpbrew path etc)');
         foreach ($this->post() as $entry) {
             list($method, $args) = $entry;
             call_user_func_array(array($file, $method), $args);

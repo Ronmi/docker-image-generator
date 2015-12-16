@@ -71,4 +71,18 @@ abstract class Variant
             ),
         );
     }
+
+    protected function enableExtension($ext)
+    {
+        return array(
+            array('appendToFile', array("extension=$ext.so", '$ETCDIR/php.ini')),
+        );
+    }
+
+    protected function enableZendExtension($ext)
+    {
+        return array(
+            array('appendToFile', array("zend_extension=$ext.so", '$ETCDIR/php.ini')),
+        );
+    }
 }

@@ -55,9 +55,6 @@ class Gd extends \PHPBrew\DIG\TestableVariant
 
     public function post($phpVer, $debianVer)
     {
-        return array(
-            array('shell', array('ETCDIR=$(phpbrew path etc)')),
-            array('appendToFile', array('extension=gd.so', '$ETCDIR/php.ini')),
-        );
+        return $this->enableExtension('gd');
     }
 }
